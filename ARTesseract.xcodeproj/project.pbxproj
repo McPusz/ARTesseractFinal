@@ -13,6 +13,7 @@
 		B6029A07208FB2DF000EC3DC /* EndGameAlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6029A06208FB2DF000EC3DC /* EndGameAlertStoryboard.storyboard */; };
 		B6029A09208FB7A0000EC3DC /* EndGameAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6029A08208FB7A0000EC3DC /* EndGameAlertViewController.swift */; };
 		B6029A0B208FC1B7000EC3DC /* EndGameAlert+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6029A0A208FC1B7000EC3DC /* EndGameAlert+UIViewController.swift */; };
+		B6029A0D208FC343000EC3DC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6029A0C208FC343000EC3DC /* Colors.swift */; };
 		B6622F13208F1C6000BBD784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6622F12208F1C6000BBD784 /* AppDelegate.swift */; };
 		B6622F15208F1C6000BBD784 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B6622F14208F1C6000BBD784 /* art.scnassets */; };
 		B6622F17208F1C6000BBD784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6622F16208F1C6000BBD784 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		B6029A06208FB2DF000EC3DC /* EndGameAlertStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndGameAlertStoryboard.storyboard; sourceTree = "<group>"; };
 		B6029A08208FB7A0000EC3DC /* EndGameAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameAlertViewController.swift; sourceTree = "<group>"; };
 		B6029A0A208FC1B7000EC3DC /* EndGameAlert+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndGameAlert+UIViewController.swift"; sourceTree = "<group>"; };
+		B6029A0C208FC343000EC3DC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B6622F0F208F1C6000BBD784 /* ARTesseract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTesseract.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6622F12208F1C6000BBD784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6622F14208F1C6000BBD784 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				B6622F12208F1C6000BBD784 /* AppDelegate.swift */,
 				B6622F1D208F1C6200BBD784 /* LaunchScreen.storyboard */,
 				B6622F27208F356100BBD784 /* Localizable.strings */,
+				B6029A0C208FC343000EC3DC /* Colors.swift */,
 			);
 			name = AppSettings;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				B6029A09208FB7A0000EC3DC /* EndGameAlertViewController.swift in Sources */,
 				B6029A04208FAC0C000EC3DC /* Localize+String.swift in Sources */,
 				B6029A0B208FC1B7000EC3DC /* EndGameAlert+UIViewController.swift in Sources */,
+				B6029A0D208FC343000EC3DC /* Colors.swift in Sources */,
 				B6622F17208F1C6000BBD784 /* ViewController.swift in Sources */,
 				B6622F13208F1C6000BBD784 /* AppDelegate.swift in Sources */,
 				B60299FF208F4A98000EC3DC /* KeyboardNotifications+UIViewController.swift in Sources */,
