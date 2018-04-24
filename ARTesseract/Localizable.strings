@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ARTesseract
+
+  Created by Magdusz on 24.04.2018.
+  Copyright © 2018 com.McPusz.ARTesseract. All rights reserved.
+*/
+
+"gameWonTopText" = "Congratulation!";
+"gameLostTopText" = "Sorry";
+"gameWonMidText" = "You won!";
+"gameLostMidText" = "You lost!";
+"gameResultBottomText" = "To play again remove nodes";
+"tooMuchNodes" = "Too much nodes!";

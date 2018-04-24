@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uG-fx-UVe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--End Game Alert View Controller-->
+        <scene sceneID="wv1-OY-lEF">
+            <objects>
+                <viewController id="9uG-fx-UVe" customClass="EndGameAlertViewController" customModule="ARTesseract" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kJQ-k9-nix">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Als-WP-jPf">
+                                <rect key="frame" x="16" y="210" width="343" height="114"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-b3-ubs">
+                                        <rect key="frame" x="0.0" y="16" width="343" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-Pe-yTX">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                        <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove nodes to play again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsr-vg-ots">
+                                        <rect key="frame" x="0.0" y="85.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aau-py-LR5">
+                                        <rect key="frame" x="312" y="8" width="23" height="22.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Aau-py-LR5" secondAttribute="height" multiplier="1:1" id="VlE-Ck-lyO"/>
+                                        </constraints>
+                                        <state key="normal" image="cancel_button"/>
+                                        <connections>
+                                            <action selector="closeButton:" destination="9uG-fx-UVe" eventType="touchUpInside" id="9q3-ER-4g3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.73725490199999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="u7F-Pe-yTX" firstAttribute="centerY" secondItem="Als-WP-jPf" secondAttribute="centerY" id="8YO-OF-3To"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lsr-vg-ots" secondAttribute="trailing" id="BsJ-mc-y67"/>
+                                    <constraint firstItem="Aau-py-LR5" firstAttribute="top" secondItem="Als-WP-jPf" secondAttribute="top" constant="8" id="C0n-Y8-Rhd"/>
+                                    <constraint firstItem="u7F-Pe-yTX" firstAttribute="centerX" secondItem="Als-WP-jPf" secondAttribute="centerX" id="IGG-TM-OrX"/>
+                                    <constraint firstItem="PbI-b3-ubs" firstAttribute="leading" secondItem="Als-WP-jPf" secondAttribute="leading" id="UuU-Uw-x5C"/>
+                                    <constraint firstAttribute="trailing" secondItem="PbI-b3-ubs" secondAttribute="trailing" id="Xyb-Xc-XEj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aau-py-LR5" secondAttribute="trailing" constant="8" id="bgT-C9-D2i"/>
+                                    <constraint firstItem="u7F-Pe-yTX" firstAttribute="leading" secondItem="Als-WP-jPf" secondAttribute="leading" id="bkS-NH-nmD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lsr-vg-ots" secondAttribute="bottom" constant="8" id="eNw-FI-5z4"/>
+                                    <constraint firstItem="Aau-py-LR5" firstAttribute="height" secondItem="Als-WP-jPf" secondAttribute="height" multiplier="1:5" id="hRe-To-5nm"/>
+                                    <constraint firstItem="PbI-b3-ubs" firstAttribute="top" secondItem="Als-WP-jPf" secondAttribute="top" constant="16" id="k1T-Rp-RCU"/>
+                                    <constraint firstItem="Lsr-vg-ots" firstAttribute="top" relation="greaterThanOrEqual" secondItem="u7F-Pe-yTX" secondAttribute="bottom" constant="8" id="mDG-0Z-Qid"/>
+                                    <constraint firstAttribute="width" secondItem="Als-WP-jPf" secondAttribute="height" multiplier="3:1" id="vBr-dU-CEF"/>
+                                    <constraint firstItem="Lsr-vg-ots" firstAttribute="leading" secondItem="Als-WP-jPf" secondAttribute="leading" id="vYx-vk-yKq"/>
+                                    <constraint firstItem="u7F-Pe-yTX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PbI-b3-ubs" secondAttribute="bottom" constant="8" id="wIA-xL-NC3"/>
+                                    <constraint firstAttribute="trailing" secondItem="u7F-Pe-yTX" secondAttribute="trailing" id="zye-Sf-lIa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Als-WP-jPf" firstAttribute="centerX" secondItem="kJQ-k9-nix" secondAttribute="centerX" id="7Eq-rX-OaL"/>
+                            <constraint firstItem="Idp-XS-pyX" firstAttribute="trailing" secondItem="Als-WP-jPf" secondAttribute="trailing" constant="16" id="7IL-Nf-doi"/>
+                            <constraint firstItem="Als-WP-jPf" firstAttribute="leading" secondItem="Idp-XS-pyX" secondAttribute="leading" constant="16" id="9i2-V0-7Qd"/>
+                            <constraint firstItem="Als-WP-jPf" firstAttribute="centerY" secondItem="kJQ-k9-nix" secondAttribute="centerY" multiplier="0.8" id="dUt-w5-vHJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Idp-XS-pyX"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="Lsr-vg-ots" id="tvt-jQ-3IY"/>
+                        <outlet property="midLabel" destination="u7F-Pe-yTX" id="ISB-HF-jTW"/>
+                        <outlet property="topLabel" destination="PbI-b3-ubs" id="H71-Bz-7T7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aab-zS-Ybu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="206.44677661169416"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel_button" width="24" height="24"/>
+    </resources>
+</document>
