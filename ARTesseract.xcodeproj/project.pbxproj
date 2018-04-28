@@ -16,6 +16,7 @@
 		B6029A0D208FC343000EC3DC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6029A0C208FC343000EC3DC /* Colors.swift */; };
 		B616FB9820948906002F9851 /* CubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B616FB9720948906002F9851 /* CubeNode.swift */; };
 		B616FB9C20951BC0002F9851 /* Equatable+SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B616FB9B20951BC0002F9851 /* Equatable+SCNVector3.swift */; };
+		B616FB9E20951E4C002F9851 /* Tesseract+ArraySCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B616FB9D20951E4C002F9851 /* Tesseract+ArraySCNNode.swift */; };
 		B6622F13208F1C6000BBD784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6622F12208F1C6000BBD784 /* AppDelegate.swift */; };
 		B6622F17208F1C6000BBD784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6622F16208F1C6000BBD784 /* ViewController.swift */; };
 		B6622F1A208F1C6000BBD784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6622F18208F1C6000BBD784 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		B6029A0C208FC343000EC3DC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B616FB9720948906002F9851 /* CubeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeNode.swift; sourceTree = "<group>"; };
 		B616FB9B20951BC0002F9851 /* Equatable+SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+SCNVector3.swift"; sourceTree = "<group>"; };
+		B616FB9D20951E4C002F9851 /* Tesseract+ArraySCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tesseract+ArraySCNNode.swift"; sourceTree = "<group>"; };
 		B6622F0F208F1C6000BBD784 /* ARTesseract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTesseract.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6622F12208F1C6000BBD784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6622F16208F1C6000BBD784 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				B60299FE208F4A97000EC3DC /* KeyboardNotifications+UIViewController.swift */,
 				B6029A03208FAC0C000EC3DC /* Localize+String.swift */,
 				B616FB9B20951BC0002F9851 /* Equatable+SCNVector3.swift */,
+				B616FB9D20951E4C002F9851 /* Tesseract+ArraySCNNode.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				B6622F13208F1C6000BBD784 /* AppDelegate.swift in Sources */,
 				B616FB9820948906002F9851 /* CubeNode.swift in Sources */,
 				B60299FF208F4A98000EC3DC /* KeyboardNotifications+UIViewController.swift in Sources */,
+				B616FB9E20951E4C002F9851 /* Tesseract+ArraySCNNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
