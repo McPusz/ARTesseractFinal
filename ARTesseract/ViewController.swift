@@ -35,6 +35,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerForKeyboardNotifications()
+        self.setupARScene()
+        self.setupARSession()
     }
     
     deinit {
@@ -44,11 +46,77 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func showChallengeInfo(_ sender: UIButton) {
         self.infoVisible = !self.infoVisible
     }
+    
+    @IBAction func addNodeTapped(_ sender: UIButton) {
+        self.addCube()
+        self.checkWinningConditions()
+        self.clearInput()
+    }
+    
+    @IBAction func removeButtonTapped(_ sender: UIButton) {
+        self.removeAllNodes()
+    }
+    
+    
+    private func checkWinningConditions() {
+        
+    }
 }
 
+//MARK: Textfields
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
+    }
+    
+    private func getInputPosition() -> SCNVector3? {
+        guard let xPosString = self.xTextField.text,
+            let yPosString = self.yTextField.text,
+            let zPosString = zTextField.text,
+            let xPosFloat = Float(xPosString),
+            let yPosFloat = Float(yPosString),
+            let zPosFloat = Float(zPosString) else {
+                print("Wrong input")
+                return nil
+        }
+        return SCNVector3Make(xPosFloat, yPosFloat, zPosFloat)
+    }
+    
+    private func clearInput() {
+        [self.xTextField,
+         self.yTextField,
+         self.zTextField].forEach{ $0?.text = nil }
+    }
+}
+
+//MARK: ARKit
+extension ViewController {
+    
+    private func setupARScene() {
+        self.sceneView.delegate = self
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
+        self.sceneView.scene = SCNScene()
+    }
+    
+    private func setupARSession() {
+        let configuration = ARWorldTrackingConfiguration()
+        self.sceneView.session.run(configuration)
+    }
+    
+    private func addCube() {
+        guard let inputPosition = self.getInputPosition() else { return }
+        self.insertNodeAt(position: inputPosition)
+    }
+    
+    private func insertNodeAt(position: SCNVector3) {
+        let cubeNode = CubeNode()
+        cubeNode.position = position
+        self.sceneView.scene.rootNode.addChildNode(cubeNode)
+    }
+    
+    private func removeAllNodes() {
+        self.sceneView.scene.rootNode
+            .childNodes.forEach { $0.removeFromParentNode() }
     }
 }

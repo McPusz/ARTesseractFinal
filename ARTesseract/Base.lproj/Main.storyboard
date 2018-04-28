@@ -166,6 +166,9 @@
                                             <constraint firstAttribute="width" constant="40" id="N7D-yT-KkB"/>
                                         </constraints>
                                         <state key="normal" image="add_icon"/>
+                                        <connections>
+                                            <action selector="addNodeTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="I8F-Wj-TZI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAJ-hT-eHJ">
                                         <rect key="frame" x="147.5" y="0.0" width="40" height="40"/>
@@ -181,6 +184,9 @@
                                             <constraint firstAttribute="width" secondItem="uid-te-rWL" secondAttribute="height" multiplier="1:1" id="w4U-3V-wV4"/>
                                         </constraints>
                                         <state key="normal" image="remove_icon"/>
+                                        <connections>
+                                            <action selector="removeButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="xCX-Ky-jLV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
