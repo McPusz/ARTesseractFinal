@@ -10,11 +10,11 @@ import SceneKit
 
 class CubeNode: SCNNode {
     
-    private let edgeSize: CGFloat = 0.1
+    static let edgeSize: CGFloat = 0.1
     
     override init() {
         super.init()
-        let cubeGeometry = SCNBox(width: self.edgeSize, height: self.edgeSize, length: self.edgeSize, chamferRadius: 0)
+        let cubeGeometry = SCNBox(width: CubeNode.edgeSize, height: CubeNode.edgeSize, length: CubeNode.edgeSize, chamferRadius: 0)
         let boxMaterial = SCNMaterial()
         cubeGeometry.materials = [boxMaterial]
         cubeGeometry.materials.first?.diffuse.contents = Colors.randomColor
