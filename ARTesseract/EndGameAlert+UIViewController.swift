@@ -14,5 +14,6 @@ extension UIViewController {
         guard let endGameAlert = UIStoryboard(name: "EndGameAlertStoryboard", bundle: nil).instantiateInitialViewController() as? EndGameAlertViewController else { return }
         endGameAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         self.present(endGameAlert, animated: true, completion: nil)
+        endGameAlert.setState(state: gameResult)
     }
 }

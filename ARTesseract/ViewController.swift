@@ -36,9 +36,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return self.sceneView.scene.rootNode.childNodes.filter { $0 is CubeNode }
     }
     
-    private var gameResult: GameResult {
-        return self.gameIsWon() ? .won : .lost
-    }
+    private var gameResult: GameResult = .lost
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,16 +61,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func removeButtonTapped(_ sender: UIButton) {
         self.removeAllNodes()
-        
     }
     
     
     private func checkWinningConditions() {
         if self.enoughCubesAdded() {
-            self.presentAlertWith(gameResult: self.gameResult)
+            self.gameResult = self.gameIsWon() ? .won : .lost
+            self.setupEndGameUI()
         }
     }
     
+    private func setupEndGameUI() {
+        self.presentAlertWith(gameResult: self.gameResult)
+        
+        if self.gameResult == .won {
+            self.showExplosion()
+        }
+    }
 }
 
 //MARK: Textfields
@@ -143,5 +148,12 @@ extension ViewController {
     
     private func gameIsWon() -> Bool {
         return self.cubeNodes.isTesseract()
+    }
+    
+    func showExplosion() {
+        let cubeNodes = self.sceneView.scene.rootNode.childNodes.filter{$0 is CubeNode}
+        guard let firstCube = cubeNodes.first else { return }
+        let explosion = ExplosionNode(at: firstCube.position)
+        self.sceneView.scene.rootNode.addChildNode(explosion)
     }
 }

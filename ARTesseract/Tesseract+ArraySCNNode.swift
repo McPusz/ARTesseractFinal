@@ -30,7 +30,7 @@ extension Array where Element: SCNNode {
     }
     
     private func getVerticalTesseractShape() -> [SCNVector3] {
-        let topNode = self.getTopNode()
+        let topNode = self.getBottomNode()
         let cubeSize = CubeNode.edgeSize
         var verticalCubesPositions = [SCNVector3]()
         
@@ -47,7 +47,7 @@ extension Array where Element: SCNNode {
     }
     
     private func getHorizontalTesseractShape() -> [SCNVector3] {
-        let topNode = self.getTopNode()
+        guard let topNode = self.getTopNode() else { return [SCNVector3]()}
         let cubeSize = CubeNode.edgeSize
         var horizontalCubesPositions = [SCNVector3]()
         
@@ -71,8 +71,29 @@ extension Array where Element: SCNNode {
         return horizontalCubesPositions
     }
     
-    private func getTopNode() -> SCNNode {
+    private func getBottomNode() -> SCNNode {
         let sortedVerticallyNodes = self.sorted { $0.position.y < $1.position.y }
         return sortedVerticallyNodes[0]
+    }
+    
+    private func getTopNode() -> SCNNode? {
+        let sortedVerticallyNodes = self.sorted { $0.position.y < $1.position.y }
+        return sortedVerticallyNodes.last
+    }
+}
+
+
+extension Array where Iterator.Element == SCNVector3 {
+    
+    public func contains(_ element: SCNVector3) -> Bool {
+        for eachObject in self {
+            let xEqual = String(eachObject.x) == String(element.x)
+            let yEqual = String(eachObject.y) == String(element.y)
+            let zEqual = String(eachObject.z) == String(element.z)
+            if xEqual && yEqual && zEqual {
+                return true
+            }
+        }
+        return false
     }
 }
