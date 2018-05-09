@@ -114,6 +114,7 @@ extension ViewController {
         self.sceneView.delegate = self
         self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
         self.sceneView.scene = SCNScene()
+        self.sceneView.autoenablesDefaultLighting = true
     }
     
     private func setupARSession() {
